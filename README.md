@@ -1,2 +1,3 @@
 # FriendFace
-A social media platform
+
+A social media platform 
