@@ -1,113 +1,113 @@
-const users =
+const users = [
 
 // users.json
-[
+
   {
-    "name": "John Smith",
+    "username": "John Smith",
     "email": "john.smith@example.com"
   },
   {
-    "name": "Emma Johnson",
+    "username": "Emma Johnson",
     "email": "emma.johnson@example.com"
   },
   {
-    "name": "Michael Williams",
+    "username": "Michael Williams",
     "email": "michael.williams@example.com"
   },
   {
-    "name": "Emily Brown",
+    "username": "Emily Brown",
     "email": "emily.brown@example.com"
   },
   {
-    "name": "Daniel Jones",
+    "username": "Daniel Jones",
     "email": "daniel.jones@example.com"
   },
   {
-    "name": "Olivia Taylor",
+    "username": "Olivia Taylor",
     "email": "olivia.taylor@example.com"
   },
   {
-    "name": "William Davis",
+    "username": "William Davis",
     "email": "william.davis@example.com"
   },
   {
-    "name": "Ava Martinez",
+    "username": "Ava Martinez",
     "email": "ava.martinez@example.com"
   },
   {
-    "name": "Sophia Garcia",
+    "username": "Sophia Garcia",
     "email": "sophia.garcia@example.com"
   },
   {
-    "name": "James Rodriguez",
+    "username": "James Rodriguez",
     "email": "james.rodriguez@example.com"
   },
   {
-    "name": "Isabella Hernandez",
+    "username": "Isabella Hernandez",
     "email": "isabella.hernandez@example.com"
   },
   {
-    "name": "Logan Lopez",
+    "username": "Logan Lopez",
     "email": "logan.lopez@example.com"
   },
   {
-    "name": "Mia Gonzalez",
+    "username": "Mia Gonzalez",
     "email": "mia.gonzalez@example.com"
   },
   {
-    "name": "Benjamin Wilson",
+    "username": "Benjamin Wilson",
     "email": "benjamin.wilson@example.com"
   },
   {
-    "name": "Amelia Anderson",
+    "username": "Amelia Anderson",
     "email": "amelia.anderson@example.com"
   },
   {
-    "name": "Ethan Thomas",
+    "username": "Ethan Thomas",
     "email": "ethan.thomas@example.com"
   },
   {
-    "name": "Charlotte Moore",
+    "username": "Charlotte Moore",
     "email": "charlotte.moore@example.com"
   },
   {
-    "name": "Alexander Jackson",
+    "username": "Alexander Jackson",
     "email": "alexander.jackson@example.com"
   },
   {
-    "name": "Harper White",
+    "username": "Harper White",
     "email": "harper.white@example.com"
   },
   {
-    "name": "Liam Harris",
+    "username": "Liam Harris",
     "email": "liam.harris@example.com"
   },
   {
-    "name": "Evelyn Martin",
+    "username": "Evelyn Martin",
     "email": "evelyn.martin@example.com"
   },
   {
-    "name": "Lucas Thompson",
+    "username": "Lucas Thompson",
     "email": "lucas.thompson@example.com"
   },
   {
-    "name": "Avery Lewis",
+    "username": "Avery Lewis",
     "email": "avery.lewis@example.com"
   },
   {
-    "name": "Sophie Clark",
+    "username": "Sophie Clark",
     "email": "sophie.clark@example.com"
   },
   {
-    "name": "Henry Walker",
+    "username": "Henry Walker",
     "email": "henry.walker@example.com"
   }
 ];
 
-const thoughts = 
+const thoughts = [
 
 // thoughts.json
-[
+
   {
     "thoughtText": "Just finished a great book. Highly recommend!",
     "username": "John Smith"
@@ -211,6 +211,7 @@ const thoughts =
 ]
 
 
+module.exports = { users, thoughts };
 
 
 // Export the functions for use in seed.js
