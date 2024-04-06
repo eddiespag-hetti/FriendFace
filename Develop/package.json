@@ -2,8 +2,8 @@
 
   "name": "FriendFace",
   "version": "1.0",
-  "description": "Mongoose back-end project",
-  "main": "index.js",
+  "description": "Mongoose back-end assignment",
+  "main": "Develop/index.js",
   "license": "MIT",
 
   "scripts": {
