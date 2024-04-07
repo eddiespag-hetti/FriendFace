@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
-const { User } = require('../../models')
-
+const {
+    getUsers,
+    getSingleUser,
+    createUser,
+} = require('../../contollers/userController');
 
 
 
