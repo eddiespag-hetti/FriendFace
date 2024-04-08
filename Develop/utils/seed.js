@@ -8,5 +8,5 @@ connection.once('open', async () => {
     const userData = await User.create(users);
     const thoughtData = await Thought.create(thoughts);
     console.log(userData, thoughtData);
-    procces.exit(0);
+    process.exit(0);
 })
