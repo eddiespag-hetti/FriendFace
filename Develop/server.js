@@ -18,7 +18,7 @@ client.connect()
     });
   })
   .catch((err) => {
-    console.error('Mongo connection error: ', err.message);
+    console.error('Error connecting to Mongo DB: ', err.message);
   });
 
 app.use(express.urlencoded({ extended: true }));

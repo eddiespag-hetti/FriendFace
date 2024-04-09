@@ -58,6 +58,27 @@ async createThought(req, res) {
   },
 
 
+  // Update a thought 
+  async updateThought(req, res) {
+    try {
+      const thought = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        { $set: req.body },
+        { runValidators: true, new: true }
+      );
+  
+      if (!thought) {
+        return res.status(404).json({ message: 'No thought was found with this id' });
+      }
+  
+      res.json(thought);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Error! Could not update thought', err});
+    }
+  },
+
+
   // Delete a thought
   async deleteThought(req, res) {
     try {
@@ -74,4 +95,62 @@ async createThought(req, res) {
     }
   },
 
-}
+
+
+  // ----------- REACTIONS ---------------------------//
+  // Crete a reaction when thought is updated
+  async createReaction(req, res) {
+    try {
+      // Finds the thought by ID and update it to add the reaction:
+      const thought = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        // Adds the reaction to the reactions array
+        { $addToSet: { reactions: req.body } }, 
+        // Returns the updated thought
+        { runValidators: true, new: true } 
+      );
+  
+      if (!thought) {
+        return res.status(404).json({ error: 'No thought was found with this id' });
+      }
+  
+      res.json(thought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
+// Delete a reaction when thought it updated
+async deleteReaction(req, res) {
+    try {
+// Finds the thought by ID and update it to remove the reaction:
+      const thought = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        // Removes the reaction from the reactions array
+        { $pull: { reactions: { reactionId: req.params.reactionId } } },
+        // Returns the updated thought
+        { runValidators: true, new: true }
+      );
+  
+      if (!thought) {
+        // If no thought is found, return a 404 error
+        return res.status(404).json({ error: 'No thought was found with this id' });
+      }
+    
+
+    
+      res.json(thought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+};
+
+
+
+
+
+
+
+// Exports the controller module for use in other files
+module.exports = thoughtController;
