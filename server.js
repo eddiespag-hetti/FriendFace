@@ -1,6 +1,6 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
-const db = require('./config/connection');
+const db = require('./Develop/config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -10,11 +10,11 @@ const dbName = 'FriendFaceDB';
 
 client.connect()
   .then(() => {
-    console.log('Connected successfully to MongoDB');
+    console.log('Successfully connected to MongoDB');
     db = client.db(dbName);
 
     app.listen(PORT, () => {
-      console.log(`Example app listening at http://localhost:${PORT}`);
+      console.log(`App is listening at http://localhost:${PORT}`);
     });
   })
   .catch((err) => {

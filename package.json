@@ -1,11 +1,13 @@
 {"name":"FriendFace",
 "version":"1.0",
 "description":"Mongoose back-end assignment",
-"main":"Develop/index.js",
+"main":"index.js",
 "license":"MIT",
-"scripts":{"start":"node index",
+"scripts":{
+    "start":"node index",
 "dev":"nodemon index",
-"seed":"node utils/seed"},
+"seed":"node utils/seed"
+},
 
 
 "dependencies":

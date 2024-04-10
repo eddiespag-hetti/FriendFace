@@ -26,15 +26,15 @@ async getSingleUser(req, res) {
         .populate('friends')
 
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' })
+        return res.status(404).json({ message: 'No user found with that ID' })
       }
+      res.status(200).json(user)
     }
     catch (err) {
       res.status(500).json({ err });
       return;
     }
     
-    res.status(200).json(user)
 },
 
 // Create a new User
