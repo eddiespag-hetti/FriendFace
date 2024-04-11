@@ -124,7 +124,7 @@ async createThought(req, res) {
 async deleteReaction(req, res) {
     try {
 // Finds the thought by ID and update it to remove the reaction:
-      const thought = await Thought.findOneAndUpdate(
+      const thought = await Thought.findOneAndDelete(
         { _id: req.params.thoughtId },
         // Removes the reaction from the reactions array
         { $pull: { reactions: { reactionId: req.params.reactionId } } },

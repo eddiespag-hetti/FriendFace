@@ -9,7 +9,7 @@ function formatDate(date) {
 // Reaction Schema - is embedded within the Thought Schema, does not require its own.
 const reactionSchema = new Schema(
   {
-    reactionBody: {
+    reactionId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
