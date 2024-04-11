@@ -1,4 +1,4 @@
-# FriendFace
+# FriendFace API
 
 A social media API
 
